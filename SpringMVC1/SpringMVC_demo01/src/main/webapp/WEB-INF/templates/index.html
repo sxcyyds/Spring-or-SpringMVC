@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>欢迎来到SpringMVC</p>
+<!--  /   以斜线开头的路径叫做绝对路劲，觉罗路径分为浏览器解析的和服务器解析的，缺少上下文路径-->
+<a th:href="@{/target}">跳转到指定也页面target.html</a>
+
+</body>
+</html>

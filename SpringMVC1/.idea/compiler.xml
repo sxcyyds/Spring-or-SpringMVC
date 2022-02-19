@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SpringMVC_Rest" />
+        <module name="SpringMVC-demo02" />
+        <module name="SpringMVC_demo04" />
+        <module name="SpringMVC_demo05" />
+        <module name="springMVC_demo03" />
+        <module name="SpringMVC_demo01" />
+        <module name="SpringMVC-annotation" />
+        <module name="spring-jsp" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-jsp" target="1.8" />
+      <module name="SpringMVC-annotation" target="1.8" />
+      <module name="SpringMVC-demo02" target="1.8" />
+      <module name="SpringMVC-rest" target="1.8" />
+      <module name="SpringMVC_demo01" target="1.8" />
+      <module name="springMVC_demo03" target="1.8" />
+      <module name="SpringMVC_demo04" target="1.8" />
+      <module name="SpringMVC_demo05" target="1.8" />
+      <module name="SpringMVC_demo2" target="1.8" />
+      <module name="SpringMVC_jsp" target="1.8" />
+      <module name="SpringMVC_Rest" target="1.8" />
+      <module name="SpringMVC_Restful" target="1.8" />
+      <module name="SpringMVC_RestFul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

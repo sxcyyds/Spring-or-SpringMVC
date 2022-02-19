@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--   1、集合类型属性注入-->
+    <bean id="stu" class="com.atguigu.spring.collecttype.Stu" scope="prototype">
+        <!--数组属性的注入-->
+        <property name="course">
+            <array>     <!--array或者list标签都可以-->
+                <value>语文</value>
+                <value>数学</value>
+                <value>英语</value>
+                <value>地理</value>
+
+            </array>
+        </property>
+        <!--list属性类型的注入-->
+        <property name="list">
+            <list>
+                <value>傻逼</value>
+                <value>二货</value>
+            </list>
+        </property>
+        <!--Map类型属性注入-->
+        <property name="map">
+            <map>
+                <entry key="a" value="1"></entry>
+                <entry key="b" value="2"></entry>
+            </map>
+        </property>
+        <!--set类型属性注入-->
+        <property name="sets">
+            <set>
+                <value>MySql</value>
+                <value>Orcal</value>
+            </set>
+        </property>
+        <!--注入list集合，但是元素是对象-->
+        <property name="courseslist">
+            <list>
+                <ref bean="course"></ref>
+                <ref bean="course1"></ref>
+            </list>
+        </property>
+
+
+    </bean>
+    <!--        创建多个course对象-->
+    <bean id="course" class="com.atguigu.spring.collecttype.Course">
+        <property name="name" value="spring5框架课程"></property>
+    </bean>
+    <bean id="course1" class="com.atguigu.spring.collecttype.Course">
+        <property name="name" value="mybatis框架课程"></property>
+    </bean>
+</beans>

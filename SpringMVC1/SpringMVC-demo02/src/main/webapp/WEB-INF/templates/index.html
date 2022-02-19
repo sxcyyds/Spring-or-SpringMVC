@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Hello<br>
+<a th:href="@{/target}">跳转到指定的页面</a><br>
+<a th:href="@{/hello/a}">跳转到@RequestMapping注解页面</a><br>
+<a th:href="@{/hello/a}">跳转到@RequestMapping注解页面,测试@RequestMapping的value属性【数组】</a><br>
+<form th:action="@{/hello/test}" method="post">
+    <input type="submit" value="测试@RequestMapping的method方法--->post">
+</form>
+
+<a th:href="@{/hello/getMapping}">getMapping</a>
+<form th:action="@{/hello/test}" method="GET">
+    <input type="submit" value="测试表单是否能发送put/delete请求的方法--->post">
+</form><br>
+<a th:href="@{/hello/testParamsAndHeaders?username=tom&password=123123}">测试@RequestMapping注解的params属性------->params</a><br>
+<a th:href="@{/hello/testParamsAndHeaders(username='tom')}">测试@RequestMapping注解的params属性------->params</a><br>
+
+<a th:href="@{/hello/a1a/testAnt}">测试@RequestMapping可以匹配ant风格的路径------->ant风格路径    ?</a><br>
+<a th:href="@{/hello/a1231a/testAnt}">测试@RequestMapping可以匹配ant风格的路径------->ant风格路径   *</a><br>
+<a th:href="@{/hello/a/a/a/a/testAnt}">测试@RequestMapping可以匹配ant风格的路径------->ant风格路径   **</a><br>
+
+<a th:href="@{/hello/testPath/1}">测试SpringMVC支持路径中的占位符---->/testPath</a>
+
+</body>
+</html>

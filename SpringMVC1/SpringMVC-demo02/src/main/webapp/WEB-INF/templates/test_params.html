@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试请求参数</title>
+</head>
+<body>
+<h1>测试请求参数</h1>
+<a th:href="@{/testServletAPI(username='admin',password='root')}">测试使用ServletAPI获取请求参数</a><br>
+<a th:href="@{/testServletAPI1(username='史旭超',password='root')}">测试控制器方法形参获取请求参数</a>
+<form th:action="@{/testServletAPI1}" method="get">
+    姓名:<input type="text" name="user_name"> <br/>
+    密码:<input type="text" name="password"> <br/>
+    爱好：<input  type="checkbox" name="hobby" value="a">a
+    <input  type="checkbox" name="hobby" value="b">b
+    <input  type="checkbox" name="hobby" value="c">c
+    <input type="submit" value="测试控制器方法形参获取请求参数">
+</form>
+<form th:action="@{/testBean}" method="get">
+    username:<input type="text" name="user_name"><br>
+    password:<input type="password" name="password"><br/>
+    sex:<input type="text" name="sex"><br>
+    age:<input type="text" name="age"><br>
+    <input type="submit" value="使用实体类接收请求">
+
+</form>
+</body>
+</html>

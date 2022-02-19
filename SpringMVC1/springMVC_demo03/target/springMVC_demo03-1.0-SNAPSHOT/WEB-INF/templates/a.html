@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+欢迎来的到SpringMVC视图<br>
+<a th:href="@{/testRequestByServletAPI}">通过ServletAPI向request域中添加对象共享数据</a><br/>
+<a th:href="@{/testModelandView}">使用ModelAndView向request域添加数据</a><br>
+<a th:href="@{/testModel}">使用model向request域添加数据</a><br>
+<a th:href="@{/testMap}">使用map向request域中添加共享数据</a><br>
+<a th:href="@{/testModelMap}">使用ModelMap向request中添加i数据</a><br>
+<a th:href="@{/testSession}">使用原始的servletAPI设置session域中的共享数据</a><br>
+<a th:href="@{/testApplication}">使用原始的servletAPI设置application域的共享数据</a>
+
+
+</body>
+</html>
